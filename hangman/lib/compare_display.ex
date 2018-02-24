@@ -32,11 +32,11 @@ defmodule Compare_display do
 	def display(wrong_try, new_guessed_code) do
 		IO.inspect(new_guessed_code)
 		board = ["     O",
-			     "     |",
-			     "    /|\\",
-			     "   / |\\",
-			     "     |",
-			     "    / \\"]
+		         "     |",
+		         "    /|\\",
+		         "   / |\\",
+		         "     |",
+		         "    / \\"]
 
 		for i<-0..wrong_try-1 do
 			IO.puts Enum.at(board, i)

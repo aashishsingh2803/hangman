@@ -44,5 +44,3 @@ defmodule Play do
       end
     end
 end
-
-#Play.play_game("AASHISH", "-------", [0,1,2,3,4,5,6], 0)

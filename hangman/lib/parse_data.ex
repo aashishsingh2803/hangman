@@ -36,5 +36,3 @@ defmodule Data_parse do
 		|> Enum.at( :rand.uniform(length(list_word) - 1))
  	end
 end
-
-#IO.inspect Data_parse.load_file("AASHISH")
