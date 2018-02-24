@@ -7,7 +7,7 @@ defmodule Compare_display do
 		all_pos = for i<- 0..len - 1 ,do: i
 		#IO.inspect(pos_not_filled)
 		all_pos
-        |> Enum.map( fn(x)-> 
+		|> Enum.map( fn(x)-> 
 	        if input_char == String.at(hidden_code, x) do 
 	            String.at(hidden_code, x)
 	        else
@@ -19,15 +19,14 @@ defmodule Compare_display do
   	Returns list of positions which matches the hidden code
   """
 	def delete_compare(pos_not_filled ,input_char, hidden_code) do
-        IO.inspect (pos_not_filled
-        |> Enum.map(fn(x) -> if input_char == String.at(hidden_code, x) ,do: x end)
-        |> Enum.filter(fn(x) -> !is_nil(x) end))
+		IO.inspect (pos_not_filled
+		|> Enum.map(fn(x) -> if input_char == String.at(hidden_code, x) ,do: x end)
+		|> Enum.filter(fn(x) -> !is_nil(x) end))
 	end
 
 	@doc """
 	display the hanged man
   """
-
 	def display(0) ,do: nil
 
 	def display(wrong_try, new_guessed_code) do

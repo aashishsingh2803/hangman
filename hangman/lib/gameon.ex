@@ -10,7 +10,7 @@ defmodule Gameon do
 	end
 
 	def handle_cast({:hanged}, state) do
-		IO.inspect Data_parse.dead_or_alive
+		Data_parse.dead_or_alive
 		{:noreply, state}
 	end
 

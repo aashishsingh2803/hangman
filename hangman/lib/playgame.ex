@@ -5,8 +5,8 @@ defmodule Play do
   Returns 0 if player loose.
   """
     def take_input(visited_char) do
-        input_char = IO.gets("Enter Character ")
-                     |> String.trim
+        input_char = IO.gets("Enter Character ") |> String.trim
+
         if is_nil visited_char[input_char] do
             {input_char, Map.put(visited_char, input_char, 1)}
         else
@@ -23,7 +23,7 @@ defmodule Play do
     end
 
     def play_game(hidden_code, guessed_code, pos_not_filled, wrong_try, len, visited_char) do
-        
+
         {input_char, visited_char} = take_input(visited_char)
 
         new_guessed_code = List.to_string(make_compare(input_char, hidden_code, guessed_code, len))
