@@ -5,7 +5,7 @@ defmodule Compare_display do
     def make_compare(input_char, hidden_code, guessed_code, len) do
         input_char = String.upcase(input_char)
 
-        all_pos = for i<- 0..len - 1 ,do: i
+        all_pos = for i <- 0..len - 1 ,do: i
         #IO.inspect(pos_not_filled)
         all_pos
         |> Enum.map( fn(x)->

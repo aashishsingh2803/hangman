@@ -15,8 +15,9 @@ defmodule Data_parse do
         pos_not_filled  = for i<-0..len - 1 ,do: i
         #initially there in no input character so map is empty
         visited_char = %{}
-
         IO.inspect "Start Game"
+        IO.puts(guessed_code)
+
         if play_game(hidden_code, guessed_code, pos_not_filled, 0, len, visited_char) == 1 do
             IO.puts("You win")
             IO.puts("You know what the code is #{hidden_code}")

@@ -26,6 +26,8 @@ defmodule Play do
     end
 
     def play_game(hidden_code, guessed_code, pos_not_filled, wrong_try, len, visited_char) do
+        moves_left = 6 - wrong_try
+        IO.puts("You have #{moves_left} moves left")
 
         {input_char, visited_char} = take_input(visited_char)
 
@@ -37,11 +39,9 @@ defmodule Play do
             play_game(hidden_code, guessed_code, pos_not_filled, wrong_try + 1, len, visited_char)
         else
             pos_not_filled = pos_not_filled -- delete_compare(pos_not_filled, input_char, hidden_code)
-
             is_wrong_try(wrong_try, new_guessed_code)
 
             play_game(hidden_code, new_guessed_code, pos_not_filled, wrong_try , len, visited_char)
-
       end
     end
 
