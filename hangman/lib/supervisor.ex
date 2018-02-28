@@ -11,5 +11,6 @@ defmodule Supervisor_parent do
 	]
 
 	supervise(children, strategy: :one_for_one)
+
 	end
 end

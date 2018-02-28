@@ -1,7 +1,7 @@
 defmodule Hangman do
   use Application
 
-  def start_game do
+  def start(_types,_args) do
     Supervisor_parent.start_link
   end
 end

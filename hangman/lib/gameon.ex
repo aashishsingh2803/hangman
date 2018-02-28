@@ -2,11 +2,11 @@ defmodule Gameon do
 	use GenServer
 
 	def start_link do
-		GenServer.start_link(__MODULE__, [])
+		GenServer.start_link(__MODULE__, [], name: :s)
 	end
 
-	def start_cast(receiver_pid) do
-		GenServer.cast(receiver_pid, {:hanged})
+	def start_cast() do
+		GenServer.cast(:s, {:hanged})
 	end
 
 	def handle_cast({:hanged}, state) do
