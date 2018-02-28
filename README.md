@@ -1,15 +1,15 @@
 # Hangman
 # To Play Game
-Run command cd hangman
+1 Run command cd hangman
 
-then run iex -S mix
+2 run iex -S mix
 
-then run Gameon.start_link
+3 run Gameon.start_link
 
-then run Gameon.start_cast
+4 run Gameon.start_cast
 
 # To Run Test Cases
 
-Run command cd hangman
+1 Run command cd hangman
 
-then run mix test
+2 run mix test
